@@ -1,36 +1,24 @@
-// for go to add-money file
+//  for add money
+ document.getElementById('add-money').addEventListener('click', function(){
+    
+    document.getElementById('add-money').style.backgroundColor = '#F3F8FE';
+    document.getElementById('add-money').style.borderColor = '#0874F2';
+    document.getElementById('add-money-h3').style.color = '#0874F2';
+    document.getElementById('add-money-h3').style.fontWeight = 'bold';
 
-document.getElementById('add-money')
-.addEventListener('click', function(){
-    window.location.href = '../html/add-money.html'
-})
-// for go to cashout file
+    
+    document.getElementById('add-money-section').style.display = 'block';
+  })
 
-document.getElementById('cashout')
-.addEventListener('click', function(){
-    window.location.href = '../html/cashout.html'
-})
-// for go to tranfer-money file
+//  for cashout
+ document.getElementById('cashout').addEventListener('click', function(){
+    
+    document.getElementById('cashout').style.backgroundColor = '#F3F8FE';
+    document.getElementById('cashout').style.borderColor = '#0874F2';
+    document.getElementById('cashout-h3').style.color = '#0874F2';
+    document.getElementById('cashout-h3').style.fontWeight = 'bold';
 
-  document.getElementById('transfer-money')
-.addEventListener('click', function(){
-    window.location.href = '../html/transfer-money.html'
-})
-// for go to get-bonus file
 
-  document.getElementById('get-bonus')
-.addEventListener('click', function(){
-    window.location.href = '../html/get-bonus.html'
-})
-// for go to pay-bill file
-
-  document.getElementById('pay-bill')
-.addEventListener('click', function(){
-    window.location.href = '../html/pay-bill.html'
-})
-// for go to transactions file
-
-  document.getElementById('transactions')
-.addEventListener('click', function(){
-    window.location.href = '../html/transactions.html'
-})
+    document.getElementById('add-money-section').style.display = 'none';
+    document.getElementById('cashout-section').style.display = 'block';
+  })

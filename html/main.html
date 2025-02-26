@@ -29,7 +29,7 @@
         </nav>
         <hr class="text-gray-300 mt-6" />
 
-        <section class="mt-6 mb-8">
+        <section class="mt-6 mb-10">
           <h1 class="font-bold text-[1.7rem] mb-3 mx-1">
             🔥Welcome to Payooo!
           </h1>
@@ -43,11 +43,11 @@
           >
             <div
             id="add-money"
-              class="box  text-center border cursor-pointer border-gray-300 py-6 rounded-2xl"
+              class="box text-center border cursor-pointer border-gray-300 py-6 rounded-2xl"
             >
               <img src="../assets/wallet1.png" alt="" class="w-7 mx-auto" />
 
-              <h3 class="text-md mt-1">Add Money</h3>
+              <h3 id="add-money-h3" class="text-md mt-1">Add Money</h3>
             </div>
             <div
             id="cashout"
@@ -55,7 +55,7 @@
             >
               <img src="../assets/send1.png" alt="" class="w-9 mx-auto" />
 
-              <h3 class="text-md mt-1">Cashout</h3>
+              <h3 id="cashout-h3" class="text-md mt-1">Cashout</h3>
             </div>
             <div
             id="transfer-money"
@@ -93,10 +93,119 @@
           </div>
         </section>
 
-       
+        <section id="add-money-section" class="max-w-[90%] mx-auto mb-6 hidden">
+          <h2 class="font-bold text-xl">Add Money</h2>
+
+          <div
+            class="card bg-base-100 w-full rounded-4xl mt-4 max-w-sm shrink-0 shadow-2xl"
+          >
+            <div class="card-body">
+              <fieldset class="fieldset">
+                <fieldset class="fieldset">
+                  <legend class="text-[1rem] font-semibold text-[#525252]">
+                    Select A Bank
+                  </legend>
+                  <select class="select rounded-full bg-[#F4F5F7]">
+                    <option disabled selected>Select Bank</option>
+                    <option value="DBBL">DBBL</option>
+                    <option value="Islami Bank">Islami Bank</option>
+                    <option value="Sonali Bank">Sonali Bank</option>
+                    <option value="Prime Bank">Prime Bank</option>
+                  </select>
+                </fieldset>
+                <label class="text-[1rem] font-semibold text-[#525252] mt-4"
+                  >Bank Account Number</label
+                >
+                <input
+                  type="number"
+                  value="01236547890"
+                  class="input rounded-full bg-[#F4F5F7]"
+                  placeholder="Enter 11 digit account number"
+                />
+
+                <label class="text-[1rem] font-semibold text-[#525252] mt-4"
+                  >Amount to Add</label
+                >
+                <input
+                id="amountToAdd"
+                  type="email"
+                  class="input rounded-full bg-[#F4F5F7]"
+                  placeholder="Amount to Add"
+                />
+                <label class="text-[1rem] font-semibold text-[#525252] mt-4"
+                  >Pin Number</label
+                >
+                <input
+                id="pin"
+                  type="password"
+                  class="input rounded-full bg-[#F4F5F7]"
+                  value="1234"
+                  placeholder="Enter 4 digit pin number"
+                />
+                <button
+                  id="add-money-btn"
+                  class="btn bg-[#0874F2] mt-4 text-white font-bold text-lg rounded-full"
+                >
+                  Add Money
+                </button>
+              </fieldset>
+            </div>
+          </div>
+        </section>
+
+        <section id="cashout-section" class="max-w-[90%] mx-auto mb-6 hidden">
+          <h2 class="font-bold text-xl">Cash Out</h2>
+
+          <div
+            class="card bg-base-100 w-full rounded-4xl mt-4 max-w-sm shrink-0 shadow-2xl"
+          >
+            <div class="card-body">
+              <fieldset class="fieldset">
+                <label class="text-[1rem] font-semibold text-[#525252] mt-4"
+                  >Agent Number</label
+                >
+                <input
+                id="agent-number"
+                  type="number"
+                  value="01236547890"
+                  class="input rounded-full bg-[#F4F5F7]"
+                  placeholder="Enter 11 digit number"
+                />
+
+                <label class="text-[1rem] font-semibold text-[#525252] mt-4"
+                  >Amount</label
+                >
+                <input
+                  id="amountToWithdraw"
+                  type="number"
+                  class="input rounded-full bg-[#F4F5F7]"
+                  placeholder="Enter amount to withdraw"
+                />
+                <label class="text-[1rem] font-semibold text-[#525252] mt-4"
+                  >Pin Number</label
+                >
+                <input
+                  id="pin"
+                  type="password"
+                  class="input rounded-full bg-[#F4F5F7]"
+                  value="1234"
+                  placeholder="Enter 4 digit pin number"
+                />
+                <button
+                  id="withdraw-money-btn"
+                  class="btn bg-[#0874F2] mt-4 text-white font-bold text-lg rounded-full"
+                >
+                  Withdraw Money
+                </button>
+              </fieldset>
+            </div>
+          </div>
+        </section>
       </header>
     </section>
 
     <script src="../script/main.js"></script>
+    <script src="../script/addMoney.js"></script>
+    <script src="../script/cashout.js"></script>
   </body>
 </html>
