@@ -1,9 +1,9 @@
 document
-  .getElementById("withdraw-money-btn")
+  .getElementById("transfer-btn")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    const amountToWithdraw = document.getElementById("amountToWithdraw").value;
-    const convertedAmount = parseFloat(amountToWithdraw);
+    const amountToTransfer = document.getElementById("amountToTransfer").value;
+    const convertedAmount = parseFloat(amountToTransfer);
 
     const pin = document.getElementById("pin").value;
     const convertedPin = parseInt(pin);
@@ -11,15 +11,17 @@ document
     const mainBalance = document.getElementById("mainBalance").innerText;
     const convertedMainBalance = parseFloat(mainBalance);
 
-    const agentNumber = document.getElementById("agent-number").value;
+    const userAccountNumber = document.getElementById(
+      "user-account-number"
+    ).value;
 
-    if (agentNumber.length === 11) {
+    if (userAccountNumber.length === 11) {
       if (convertedPin === 1234) {
-        if (amountToWithdraw <= convertedMainBalance) {
+        if (amountToTransfer <= convertedMainBalance) {
           const newMainBalance = convertedMainBalance - convertedAmount;
           document.getElementById("mainBalance").innerText = newMainBalance;
         } else {
-          alert("You can`t have enough money to withdraw");
+          alert("You can`t have enough money to transfer");
         }
       } else {
         alert("pin is not correct");

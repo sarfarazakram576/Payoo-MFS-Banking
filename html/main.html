@@ -61,9 +61,9 @@
             id="transfer-money"
               class="box text-center border cursor-pointer border-gray-300 py-6 rounded-2xl"
             >
-              <img src="../assets/money1.png" alt="" class="w-9 mx-auto" />
+              <img  src="../assets/money1.png" alt="" class="w-9 mx-auto" />
 
-              <h3 class="text-md mt-1">Transfer Money</h3>
+              <h3 id="transfer-money-h3" class="text-md mt-1">Transfer Money</h3>
             </div>
 
             <div
@@ -201,11 +201,63 @@
             </div>
           </div>
         </section>
+
+        <section id="transfer-section" class="max-w-[90%] mx-auto mb-6 hidden">
+          <h2 class="font-bold text-xl">Transfer Money</h2>
+
+          <div
+            class="card bg-base-100 w-full rounded-4xl mt-4 max-w-sm shrink-0 shadow-2xl"
+          >
+            <div class="card-body">
+              <fieldset class="fieldset">
+                <label class="text-[1rem] font-semibold text-[#525252] mt-4"
+                  >User Account Number</label
+                >
+                <input
+                id="user-account-number"
+                  type="number"
+                  value="01236547890"
+                  class="input rounded-full bg-[#F4F5F7]"
+                  placeholder="Enter 11 digit number"
+                />
+
+                <label class="text-[1rem] font-semibold text-[#525252] mt-4"
+                  >Amount</label
+                >
+                <input
+                  id="amountToTransfer"
+                  type="number"
+                  class="input rounded-full bg-[#F4F5F7]"
+                  placeholder="Enter amount to transfer"
+                />
+                <label class="text-[1rem] font-semibold text-[#525252] mt-4"
+                  >Pin Number</label
+                >
+                <input
+                  id="pin"
+                  type="password"
+                  class="input rounded-full bg-[#F4F5F7]"
+                  value="1234"
+                  placeholder="Enter 4 digit pin number"
+                />
+                <button
+                  id="transfer-btn"
+                  class="btn bg-[#0874F2] mt-4 text-white font-bold text-lg rounded-full"
+                >
+                  Send Now
+                </button>
+              </fieldset>
+            </div>
+          </div>
+        </section>
       </header>
     </section>
 
+
+    <script src="../script/utilities/utilities.js"></script>
     <script src="../script/main.js"></script>
     <script src="../script/addMoney.js"></script>
     <script src="../script/cashout.js"></script>
+    <script src="../script/transfer.js"></script>
   </body>
 </html>

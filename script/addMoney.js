@@ -1,20 +1,27 @@
-document
-  .getElementById("add-money-btn")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    const amountToAdd = document.getElementById("amountToAdd").value;
-    const convertedAmount = parseFloat(amountToAdd);
+// document
+//   .getElementById("add-money-btn")
+//   .addEventListener("click", function (event) {
+//     event.preventDefault();
+//     const amountToAdd = document.getElementById("amountToAdd").value;
+//     const convertedAmount = parseFloat(amountToAdd);
 
-    const pin = document.getElementById("pin").value;
-    const convertedPin = parseInt(pin);
+//     const pin = document.getElementById("pin").value;
+//     const convertedPin = parseInt(pin);
 
-    const mainBalance = document.getElementById("mainBalance").innerText;
-    const convertedMainBalance = parseFloat(mainBalance);
+//     const mainBalance = document.getElementById("mainBalance").innerText;
+//     const convertedMainBalance = parseFloat(mainBalance);
 
-    if (convertedPin === 1234) {
-      const newMainBalance = convertedMainBalance + convertedAmount;
-      document.getElementById("mainBalance").innerText = newMainBalance;
-    } else {
-      alert("pin thik nai");
-    }
-  });
+//     if (convertedPin === 1234) {
+//       const newMainBalance = convertedMainBalance + convertedAmount;
+//       document.getElementById("mainBalance").innerText = newMainBalance;
+//     } else {
+//       alert("pin thik nai");
+//     }
+//   });
+
+
+
+document.getElementById('add-money')
+.addEventListener('click', function(event){
+event.preventDefault();
+})
