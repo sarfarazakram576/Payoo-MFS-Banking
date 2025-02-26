@@ -1,4 +1,5 @@
-document.getElementById("login-btn")
+document
+  .getElementById("login-btn")
   .addEventListener("click", function (event) {
     event.preventDefault();
 
@@ -7,7 +8,10 @@ document.getElementById("login-btn")
     const convertedPin = parseInt(pin);
     if (mobileNumber.length === 11) {
       if (convertedPin === 1234) {
-        window.location.href = "main.html";
+        
+        // for go to main file
+
+        window.location.href = "../html/main.html";
       } else {
         alert("pin thik nai");
       }
