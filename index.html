@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo</title>
+
+    <!-- daisyui cdn -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#1e1e1e]">
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-[#F4F5F7]">
+      <header>
+        <nav class="flex justify-center items-center mt-48">
+          <div class="relative flex justify-center items-center w-9/12 -mb-20">
+            <img class="w-72 absolute" src="assets/bg.png" alt="" />
+            <img src="assets/Group.png" alt="" class="w-16 -mt-44 z-10" />
+          </div>
+        </nav>
+      </header>
+
+      <!-- login section  -->
+      <div>
+        <div class="hero-content">
+          <div class="card bg-base-50 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <fieldset class="fieldset">
+                <label class="text-[1rem] font-semibold text-[#525252]"
+                  >Mobile Number</label
+                >
+                <input
+                  type="number"
+                  id="mobile-number"
+                  value="01962354780"
+                  class="input rounded-full bg-[#F4F5F7]"
+                  placeholder="Enter your number"
+                  required
+                />
+                <label class="text-[1rem] font-semibold text-[#525252]"
+                  >4 Digit Pin</label
+                >
+                <input
+                  type="password"
+                  id="pin"
+                  value="1234"
+                  class="input rounded-full bg-[#F4F5F7]"
+                  placeholder="Enter 4 Digit Pin"
+                  required
+                />
+                <button
+                  id="login-btn"
+                  class="btn bg-[#0874F2] mt-4 text-white font-bold text-lg rounded-full"
+                >
+                  Login
+                </button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script/login.js"></script>
+  </body>
+</html>

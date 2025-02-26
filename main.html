@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main</title>
+
+    <!-- daisyui cdn -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#1e1e1e]">
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-[#F4F5F7]">
+      <header>
+        <nav class="flex justify-between items-center px-5">
+          <div class="flex gap-3">
+            <img src="assets/Group.png" alt="" class="w-14" />
+            <div>
+              <h1 class="text-2xl font-bold">$ 45000</h1>
+              <p class="text-gray-500 pt-1">Available Balance</p>
+            </div>
+          </div>
+          <button class="btn">Log out</button>
+        </nav>
+        <hr class="text-gray-300 mt-6" />
+
+        <section class="mt-6 mb-10">
+          <h1 class="font-bold text-[1.7rem] mb-3 mx-1">
+            🔥Welcome to Payooo!
+          </h1>
+          <p class="text-lg text-gray-500 mx-3">
+            Enjoy easy and convenient financial services with us. Cashout charge
+            is low and
+          </p>
+
+          <div
+            class="grid grid-cols-3 mt-8 gap-y-6 max-w-[92%] gap-x-3 mx-auto"
+          >
+            <div
+              class="box text-center border cursor-pointer border-gray-300 py-6 rounded-2xl"
+            >
+              <img src="assets/wallet1.png" alt="" class="w-7 mx-auto" />
+
+              <h3 class="text-md mt-1">Add Money</h3>
+            </div>
+            <div
+              class="box text-center border cursor-pointer border-gray-300 py-6 rounded-2xl"
+            >
+              <img src="assets/send1.png" alt="" class="w-9 mx-auto" />
+
+              <h3 class="text-md mt-1">Cashout</h3>
+            </div>
+            <div
+              class="box text-center border cursor-pointer border-gray-300 py-6 rounded-2xl"
+            >
+              <img src="assets/money1.png" alt="" class="w-9 mx-auto" />
+
+              <h3 class="text-md mt-1">Transfer Money</h3>
+            </div>
+
+            <div
+              class="box text-center border cursor-pointer border-gray-300 py-6 rounded-2xl"
+            >
+              <img src="assets/bonus1.png" alt="" class="w-8 mx-auto" />
+
+              <h3 class="text-md mt-1">Get Bonus</h3>
+            </div>
+            <div
+              class="box text-center border cursor-pointer border-gray-300 py-6 rounded-2xl"
+            >
+              <img src="assets/purse1.png" alt="" class="w-8 mx-auto" />
+
+              <h3 class="text-md mt-1">Pay Bill</h3>
+            </div>
+            <div
+              class="box text-center border cursor-pointer border-gray-300 py-6 rounded-2xl"
+            >
+              <img src="assets/transaction1.png" alt="" class="w-8 mx-auto" />
+
+              <h3 class="text-md mt-1">Transactions</h3>
+            </div>
+          </div>
+        </section>
+
+        <section class="max-w-[92%] mx-auto mb-6">
+          <h2 class="font-bold text-xl">Add Money</h2>
+
+          <div class="card bg-base-100 w-full rounded-4xl mt-4 max-w-sm shrink-0 shadow-2xl">
+            <div class="card-body">
+              <fieldset class="fieldset ">
+                <fieldset class="fieldset ">
+                    <legend class="text-[1rem] font-semibold text-[#525252] ">Select A Bank</legend>
+                    <select class="select rounded-full bg-[#F4F5F7]">
+                      <option disabled selected>Select Bank</option>
+                      <option value="DBBL">DBBL</option>
+                      <option value="Islami Bank">Islami Bank</option>
+                      <option value="Sonali Bank">Sonali Bank</option>
+                      <option value="Prime Bank">Prime Bank</option>
+                    </select>
+                   
+                  </fieldset>
+                                  <label class="text-[1rem] font-semibold text-[#525252] mt-4">Bank Account Number</label>
+                <input type="password" class="input rounded-full bg-[#F4F5F7]" placeholder="Enter 11 digit account number" />
+
+                <label class="text-[1rem] font-semibold text-[#525252] mt-4">Amount to Add</label>
+                <input type="email" class="input rounded-full bg-[#F4F5F7]" placeholder="Add Amount to withdraw" />
+                <label class="text-[1rem] font-semibold text-[#525252] mt-4">Pin Number</label>
+                <input type="password" class="input rounded-full bg-[#F4F5F7]" placeholder="Enter 4 digit pin number" />
+                <button
+                id="login-btn"
+                class="btn bg-[#0874F2] mt-4 text-white font-bold text-lg rounded-full"
+              >
+                Add Money
+              </button>    </fieldset>
+            </div>
+          </div>
+        </section>
+      </header>
+    </section>
+  </body>
+</html>
