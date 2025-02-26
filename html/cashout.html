@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Main</title>
+    <title>Cashout</title>
 
     <!-- daisyui cdn -->
 
@@ -21,7 +21,9 @@
           <div class="flex gap-3">
             <img src="../assets/Group.png" alt="" class="w-14" />
             <div>
-              <h1 class="text-2xl font-bold" >$ <span id="mainBalance">45000</span></h1>
+              <h1 class="text-2xl font-bold">
+                $ <span id="mainBalance">45000</span>
+              </h1>
               <p class="text-gray-500 pt-1">Available Balance</p>
             </div>
           </div>
@@ -42,15 +44,15 @@
             class="grid grid-cols-3 mt-8 gap-y-6 max-w-[92%] gap-x-3 mx-auto"
           >
             <div
-            id="add-money"
-              class="box  text-center border cursor-pointer border-gray-300 py-6 rounded-2xl"
+              id="add-money"
+              class="box text-center border cursor-pointer border-gray-300 py-6 rounded-2xl"
             >
               <img src="../assets/wallet1.png" alt="" class="w-7 mx-auto" />
 
               <h3 class="text-md mt-1">Add Money</h3>
             </div>
             <div
-            id="cashout"
+              id="cashout"
               class="bg-[#F3F8FE] box text-center border cursor-pointer border-[#0874F2] py-6 rounded-2xl"
             >
               <img src="../assets/send1.png" alt="" class="w-9 mx-auto" />
@@ -58,7 +60,7 @@
               <h3 class="text-md mt-1 font-bold text-[#0874F2]">Cashout</h3>
             </div>
             <div
-            id="transfer-money"
+              id="transfer-money"
               class="box text-center border cursor-pointer border-gray-300 py-6 rounded-2xl"
             >
               <img src="../assets/money1.png" alt="" class="w-9 mx-auto" />
@@ -67,7 +69,7 @@
             </div>
 
             <div
-            id="get-bonus"
+              id="get-bonus"
               class="box text-center border cursor-pointer border-gray-300 py-6 rounded-2xl"
             >
               <img src="../assets/bonus1.png" alt="" class="w-8 mx-auto" />
@@ -75,7 +77,7 @@
               <h3 class="text-md mt-1">Get Bonus</h3>
             </div>
             <div
-            id="pay-bill"
+              id="pay-bill"
               class="box text-center border cursor-pointer border-gray-300 py-6 rounded-2xl"
             >
               <img src="../assets/purse1.png" alt="" class="w-8 mx-auto" />
@@ -83,17 +85,67 @@
               <h3 class="text-md mt-1">Pay Bill</h3>
             </div>
             <div
-            id="transactions"
+              id="transactions"
               class="box text-center border cursor-pointer border-gray-300 py-6 rounded-2xl"
             >
-              <img src="../assets/transaction1.png" alt="" class="w-8 mx-auto" />
+              <img
+                src="../assets/transaction1.png"
+                alt=""
+                class="w-8 mx-auto"
+              />
 
               <h3 class="text-md mt-1">Transactions</h3>
             </div>
           </div>
         </section>
 
-       
+        <section class="max-w-[90%] mx-auto mb-6">
+          <h2 class="font-bold text-xl">Cash Out</h2>
+
+          <div
+            class="card bg-base-100 w-full rounded-4xl mt-4 max-w-sm shrink-0 shadow-2xl"
+          >
+            <div class="card-body">
+              <fieldset class="fieldset">
+                <label class="text-[1rem] font-semibold text-[#525252] mt-4"
+                  >Agent Number</label
+                >
+                <input
+                  type="number"
+                  value="01236547890"
+                  class="input rounded-full bg-[#F4F5F7]"
+                  placeholder="Enter 11 digit number"
+                />
+
+                <label class="text-[1rem] font-semibold text-[#525252] mt-4"
+                  >Amount</label
+                >
+                <input
+                  id="amountToAdd"
+                  type="number"
+                  class="input rounded-full bg-[#F4F5F7]"
+                  placeholder="Enter amount to withdraw"
+                />
+                <label class="text-[1rem] font-semibold text-[#525252] mt-4"
+                  >Pin Number</label
+                >
+                <input
+                  id="pin"
+                  type="password"
+                  class="input rounded-full bg-[#F4F5F7]"
+                  value="1234"
+                  placeholder="Enter 4 digit pin number"
+                />
+                <button
+                  id="add-money-btn"
+                  class="btn bg-[#0874F2] mt-4 text-white font-bold text-lg rounded-full"
+                >
+                  Withdraw Money
+                </button>
+              </fieldset>
+            </div>
+          </div>
+        </section>
       </header>
     </section>
 
