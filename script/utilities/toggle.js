@@ -66,14 +66,3 @@ document.getElementById("transactions").addEventListener("click", function () {
     handleToggle('transaction-section', 'block');
   });
 
-// toggle function
-function handleToggle(id, status) {
-    document.getElementById(id).style.display = status;
-  }
-
-
-
-//   log out 
-document.getElementById('logout-btn').addEventListener('click', function(){
-    window.location.href = 'index.html';
-})
