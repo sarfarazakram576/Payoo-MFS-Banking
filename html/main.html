@@ -21,7 +21,9 @@
           <div class="flex gap-3">
             <img src="../assets/Group.png" alt="" class="w-14" />
             <div>
-              <h1 class="text-2xl font-bold" >$ <span id="mainBalance">45000</span></h1>
+              <h1 class="text-2xl font-bold">
+                $ <span id="mainBalance">45000</span>
+              </h1>
               <p class="text-gray-500 pt-1">Available Balance</p>
             </div>
           </div>
@@ -42,7 +44,7 @@
             class="grid grid-cols-3 mt-8 gap-y-6 max-w-[92%] gap-x-3 mx-auto"
           >
             <div
-            id="add-money"
+              id="add-money"
               class="box text-center border cursor-pointer border-gray-300 py-6 rounded-2xl"
             >
               <img src="../assets/wallet1.png" alt="" class="w-7 mx-auto" />
@@ -50,7 +52,7 @@
               <h3 id="add-money-h3" class="text-md mt-1">Add Money</h3>
             </div>
             <div
-            id="cashout"
+              id="cashout"
               class="box text-center border cursor-pointer border-gray-300 py-6 rounded-2xl"
             >
               <img src="../assets/send1.png" alt="" class="w-9 mx-auto" />
@@ -58,41 +60,47 @@
               <h3 id="cashout-h3" class="text-md mt-1">Cashout</h3>
             </div>
             <div
-            id="transfer-money"
+              id="transfer-money"
               class="box text-center border cursor-pointer border-gray-300 py-6 rounded-2xl"
             >
-              <img  src="../assets/money1.png" alt="" class="w-9 mx-auto" />
+              <img src="../assets/money1.png" alt="" class="w-9 mx-auto" />
 
-              <h3 id="transfer-money-h3" class="text-md mt-1">Transfer Money</h3>
+              <h3 id="transfer-money-h3" class="text-md mt-1">
+                Transfer Money
+              </h3>
             </div>
 
             <div
-            id="get-bonus"
+              id="get-bonus"
               class="box text-center border cursor-pointer border-gray-300 py-6 rounded-2xl"
             >
               <img src="../assets/bonus1.png" alt="" class="w-8 mx-auto" />
 
-              <h3 class="text-md mt-1">Get Bonus</h3>
+              <h3 class="text-md mt-1 " id="get-bonus-h3">Get Bonus</h3>
             </div>
             <div
-            id="pay-bill"
+              id="pay-bill"
               class="box text-center border cursor-pointer border-gray-300 py-6 rounded-2xl"
             >
               <img src="../assets/purse1.png" alt="" class="w-8 mx-auto" />
 
-              <h3 class="text-md mt-1">Pay Bill</h3>
+              <h3 class="text-md mt-1" id="pay-bill-h3">Pay Bill</h3>
             </div>
             <div
-            id="transactions"
+              id="transactions"
               class="box text-center border cursor-pointer border-gray-300 py-6 rounded-2xl"
             >
-              <img src="../assets/transaction1.png" alt="" class="w-8 mx-auto" />
+              <img
+                src="../assets/transaction1.png"
+                alt=""
+                class="w-8 mx-auto"
+              />
 
               <h3 class="text-md mt-1">Transactions</h3>
             </div>
           </div>
         </section>
-<!-- add money section  -->
+        <!-- add money section  -->
         <section id="add-money-section" class="max-w-[90%] mx-auto mb-6">
           <h2 class="font-bold text-xl">Add Money</h2>
 
@@ -117,7 +125,7 @@
                   >Bank Account Number</label
                 >
                 <input
-                id="bank-account-number"
+                  id="bank-account-number"
                   type="number"
                   value="01236547890"
                   class="input rounded-full bg-[#F4F5F7]"
@@ -128,7 +136,7 @@
                   >Amount to Add</label
                 >
                 <input
-                id="amountToAdd"
+                  id="amountToAdd"
                   type="email"
                   class="input rounded-full bg-[#F4F5F7]"
                   placeholder="Amount to Add"
@@ -137,7 +145,7 @@
                   >Pin Number</label
                 >
                 <input
-                id="add-money-pin"
+                  id="add-money-pin"
                   type="password"
                   class="input rounded-full bg-[#F4F5F7]"
                   value="1234"
@@ -153,7 +161,7 @@
             </div>
           </div>
         </section>
-<!-- cashout section  -->
+        <!-- cashout section  -->
         <section id="cashout-section" class="max-w-[90%] mx-auto mb-6">
           <h2 class="font-bold text-xl">Cash Out</h2>
 
@@ -166,7 +174,7 @@
                   >Agent Number</label
                 >
                 <input
-                id="agent-number"
+                  id="agent-number"
                   type="number"
                   value="01236547890"
                   class="input rounded-full bg-[#F4F5F7]"
@@ -202,7 +210,7 @@
             </div>
           </div>
         </section>
-<!-- transfer money section  -->
+        <!-- transfer money section  -->
         <section id="transfer-section" class="max-w-[90%] mx-auto mb-6">
           <h2 class="font-bold text-xl">Transfer Money</h2>
 
@@ -215,7 +223,7 @@
                   >User Account Number</label
                 >
                 <input
-                id="user-account-number"
+                  id="user-account-number"
                   type="number"
                   value="01236547890"
                   class="input rounded-full bg-[#F4F5F7]"
@@ -251,7 +259,7 @@
             </div>
           </div>
         </section>
-<!-- get bonus section  -->
+        <!-- get bonus section  -->
         <section id="get-bonus-section" class="max-w-[90%] mx-auto mb-6">
           <h2 class="font-bold text-xl">Get Bonus</h2>
 
@@ -264,12 +272,12 @@
                   >Enter Bonus Coupon</label
                 >
                 <input
-                id="coupon"
+                  id="coupon"
                   type="text"
                   class="input rounded-full bg-[#F4F5F7]"
                   placeholder="Enter your coupon"
                 />
-<button
+                <button
                   id="get-bonus-btn"
                   class="btn bg-[#0874F2] mt-4 text-white font-bold text-lg rounded-full"
                 >
@@ -279,78 +287,78 @@
             </div>
           </div>
         </section>
-<!-- pay bill section  -->
-<section id="pay-bill-section" class="max-w-[90%] mx-auto mb-6">
-  <h2 class="font-bold text-xl">Pay Bill</h2>
+        <!-- pay bill section  -->
+        <section id="pay-bill-section" class="max-w-[90%] mx-auto mb-6">
+          <h2 class="font-bold text-xl">Pay Bill</h2>
 
-  <div
-    class="card bg-base-100 w-full rounded-4xl mt-4 max-w-sm shrink-0 shadow-2xl"
-  >
-    <div class="card-body">
-      <fieldset class="fieldset">
-        <fieldset class="fieldset">
-          <legend class="text-[1rem] font-semibold text-[#525252]">
-            Select A Pay
-          </legend>
-          <select class="select rounded-full bg-[#F4F5F7]">
-            <option disabled selected>Select Bank</option>
-            <option value="DBBL">DBBL</option>
-            <option value="Islami Bank">Islami Bank</option>
-            <option value="Sonali Bank">Sonali Bank</option>
-            <option value="Prime Bank">Prime Bank</option>
-          </select>
-        </fieldset>
-        <label class="text-[1rem] font-semibold text-[#525252] mt-4"
-          >Biller Account Number</label
-        >
-        <input
-        id="biller-account-number"
-          type="number"
-          value="01236547890"
-          class="input rounded-full bg-[#F4F5F7]"
-          placeholder="Enter account number"
-        />
+          <div
+            class="card bg-base-100 w-full rounded-4xl mt-4 max-w-sm shrink-0 shadow-2xl"
+          >
+            <div class="card-body">
+              <fieldset class="fieldset">
+                <fieldset class="fieldset">
+                  <legend class="text-[1rem] font-semibold text-[#525252]">
+                    Select A Pay
+                  </legend>
+                  <select class="select rounded-full bg-[#F4F5F7]">
+                    <option disabled selected>Select Bank</option>
+                    <option value="DBBL">DBBL</option>
+                    <option value="Islami Bank">Islami Bank</option>
+                    <option value="Sonali Bank">Sonali Bank</option>
+                    <option value="Prime Bank">Prime Bank</option>
+                  </select>
+                </fieldset>
+                <label class="text-[1rem] font-semibold text-[#525252] mt-4"
+                  >Biller Account Number</label
+                >
+                <input
+                  id="biller-account-number"
+                  type="number"
+                  value="01236547890"
+                  class="input rounded-full bg-[#F4F5F7]"
+                  placeholder="Enter account number"
+                />
 
-        <label class="text-[1rem] font-semibold text-[#525252] mt-4"
-          >Amount to Pay</label
-        >
-        <input
-        id="amountToPay"
-          type="email"
-          class="input rounded-full bg-[#F4F5F7]"
-          placeholder="Add amount to pay"
-        />
-        <label class="text-[1rem] font-semibold text-[#525252] mt-4"
-          >Pin Number</label
-        >
-        <input
-        id="pay-bill-pin"
-          type="password"
-          class="input rounded-full bg-[#F4F5F7]"
-          value="1234"
-          placeholder="Enter 4 digit pin number"
-        />
-        <button
-          id="pay-bill-btn"
-          class="btn bg-[#0874F2] mt-4 text-white font-bold text-lg rounded-full"
-        >
-         Pay Now
-        </button>
-      </fieldset>
-    </div>
-  </div>
-</section>
-
+                <label class="text-[1rem] font-semibold text-[#525252] mt-4"
+                  >Amount to Pay</label
+                >
+                <input
+                  id="amountToPay"
+                  type="email"
+                  class="input rounded-full bg-[#F4F5F7]"
+                  placeholder="Add amount to pay"
+                />
+                <label class="text-[1rem] font-semibold text-[#525252] mt-4"
+                  >Pin Number</label
+                >
+                <input
+                  id="pay-bill-pin"
+                  type="password"
+                  class="input rounded-full bg-[#F4F5F7]"
+                  value="1234"
+                  placeholder="Enter 4 digit pin number"
+                />
+                <button
+                  id="pay-bill-btn"
+                  class="btn bg-[#0874F2] mt-4 text-white font-bold text-lg rounded-full"
+                >
+                  Pay Now
+                </button>
+              </fieldset>
+            </div>
+          </div>
+        </section>
       </header>
     </section>
 
-
     <script src="../script/utilities/utilities.js"></script>
     <script src="../script/utilities/toggle.js"></script>
+    <script src="../script/utilities/toggle-styles.js"></script>
     <script src="../script/main.js"></script>
     <script src="../script/addMoney.js"></script>
     <script src="../script/cashout.js"></script>
     <script src="../script/transfer.js"></script>
+    <script src="../script/getBonus.js"></script>
     <script src="../script/payBill.js"></script>
   </body>
 </html>

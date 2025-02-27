@@ -40,7 +40,7 @@
     const amount = getInputValueById("amountToTransfer");
     const pin = getInputValueById("transfer-pin");
     const userAccountNumber = document.getElementById("user-account-number").value;
-    const mainBalance = getInputInnerTextById("mainBalance");
+    const mainBalance = getInnerTextById("mainBalance");
 
     if (userAccountNumber.length === 11) {
       if (pin === 1234) {

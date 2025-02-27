@@ -6,7 +6,7 @@ document
     const amount = getInputValueById("amountToAdd");
     const pin = getInputValueById("add-money-pin");
     const bankAccountNumber = document.getElementById("bank-account-number").value;
-    const mainBalance = getInputInnerTextById("mainBalance");
+    const mainBalance = getInnerTextById("mainBalance");
 
     if (bankAccountNumber.length === 11) {
       if (pin === 1234) {

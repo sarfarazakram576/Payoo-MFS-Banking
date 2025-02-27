@@ -5,7 +5,7 @@ document.getElementById("pay-bill-btn")
     const amount = getInputValueById("amountToPay");
     const pin = getInputValueById("pay-bill-pin");
     const billerNumber = document.getElementById("biller-account-number").value;
-    const mainBalance = getInputInnerTextById("mainBalance");
+    const mainBalance = getInnerTextById("mainBalance");
 
     if (billerNumber.length === 11) {
       if (pin === 1234) {

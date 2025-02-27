@@ -49,3 +49,8 @@ document.getElementById("pay-bill").addEventListener("click", function () {
     handleToggle('pay-bill-section', 'block');
 })
 
+
+// toggle function
+function handleToggle(id, status) {
+    document.getElementById(id).style.display = status;
+  }

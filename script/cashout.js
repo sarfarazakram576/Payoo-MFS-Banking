@@ -6,7 +6,7 @@ document
     const amount = getInputValueById("amountToWithdraw");
     const pin = getInputValueById("cashout-pin");
     const agentNumber = document.getElementById("agent-number").value;
-    const mainBalance = getInputInnerTextById("mainBalance");
+    const mainBalance = getInnerTextById("mainBalance");
 
     if (agentNumber.length === 11) {
       if (pin === 1234) {
