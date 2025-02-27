@@ -48,6 +48,9 @@
         const newMainBalance = mainBalance - amount;
         setInnerTextByIdAndValue("mainBalance", newMainBalance);
         }
+        else{
+          alert('you can`t have enough balance')
+        }
       } else {
         alert("pin thik nai");
       }
