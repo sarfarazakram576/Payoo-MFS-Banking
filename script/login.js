@@ -10,12 +10,11 @@ document
       if (convertedPin === 1234) {
         
         // for go to main file
-
-        window.location.href = "main.html";
+          window.location.href = "main.html";
       } else {
         alert("pin thik nai");
       }
     } else {
-      alert("need a valid number");
+      alert("Enter a 11 digit number");
     }
   });
