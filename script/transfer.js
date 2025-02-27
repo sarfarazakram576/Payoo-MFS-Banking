@@ -48,6 +48,9 @@
         const newMainBalance = mainBalance - amount;
         setInnerTextByIdAndValue("mainBalance", newMainBalance);
         }
+        else if(amount === 0){
+          alert('you can`t transfer $0')
+        }
         else{
           alert('you can`t have enough balance')
         }

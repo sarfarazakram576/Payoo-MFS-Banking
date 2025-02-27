@@ -301,11 +301,14 @@
                     Select A Pay
                   </legend>
                   <select class="select rounded-full bg-[#F4F5F7]">
-                    <option disabled selected>Select Bank</option>
+                    <option disabled selected>Select Bank or Online Banking App</option>
                     <option value="DBBL">DBBL</option>
                     <option value="Islami Bank">Islami Bank</option>
                     <option value="Sonali Bank">Sonali Bank</option>
                     <option value="Prime Bank">Prime Bank</option>
+                    <option value="Bkash">Bkash</option>
+                    <option value="Nagad">Nagad</option>
+                    <option value="Rocket">Rocket</option>
                   </select>
                 </fieldset>
                 <label class="text-[1rem] font-semibold text-[#525252] mt-4"
@@ -318,7 +321,6 @@
                   class="input rounded-full bg-[#F4F5F7]"
                   placeholder="Enter account number"
                 />
-
                 <label class="text-[1rem] font-semibold text-[#525252] mt-4"
                   >Amount to Pay</label
                 >
@@ -350,7 +352,11 @@
         </section>
         <!-- transactions section  -->
          <section id="transaction-section" class="max-w-[90%] mx-auto mb-6"> 
+          <h2 class="font-bold text-xl">Transactions</h2>
 
+          <div id="transection-container">
+
+          </div>
          </section>
       </header>
     </section>
