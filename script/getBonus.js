@@ -104,10 +104,10 @@ document.getElementById("get-bonus-btn").addEventListener("click", function () {
 
 <div class="flex gap-3 items-center">
 <div class="bg-[#F4F5F7] p-3 rounded-full">
-<img src="assets/send1.png" alt="" class="w-10" />
+<img src="assets/bonus1.png" alt="" class="w-10" />
 </div>
 <div>
-<h3 class="font-bold text-lg text-[#525252]">Transfer Money</h3>
+<h3 class="font-bold text-lg text-[#525252]">Get Bonus</h3>
 <p class="text-[#525252] font-semibold">${currentTime}</p>
 </div>
 </div>

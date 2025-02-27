@@ -64,7 +64,7 @@ document
         
   <div class="flex gap-3 items-center">
   <div class="bg-[#F4F5F7] p-3 rounded-full">
-    <img src="assets/send1.png" alt="" class="w-10" />
+    <img src="assets/money1.png" alt="" class="w-10" />
   </div>
   <div>
     <h3 class="font-bold text-lg text-[#525252]">Transfer Money</h3>
