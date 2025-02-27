@@ -31,26 +31,33 @@
 //     }
 //   });
 
-
-  document
+document
   .getElementById("transfer-btn")
   .addEventListener("click", function (event) {
     event.preventDefault();
 
     const amount = getInputValueById("amountToTransfer");
     const pin = getInputValueById("transfer-pin");
-    const userAccountNumber = document.getElementById("user-account-number").value;
+    const userAccountNumber = document.getElementById(
+      "user-account-number"
+    ).value;
     const mainBalance = getInnerTextById("mainBalance");
 
     if (userAccountNumber.length === 11) {
       if (pin === 1234) {
         if (amount <= mainBalance) {
-        const newMainBalance = mainBalance - amount;
+        if(amount > 0){
+          const newMainBalance = mainBalance - amount;
         setInnerTextByIdAndValue("mainBalance", newMainBalance);
         }
         else if(amount === 0){
           alert('you can`t transfer $0')
         }
+        else{
+          alert('you can`t transfer negative amount')
+        }
+        }
+        
         else{
           alert('you can`t have enough balance')
         }
