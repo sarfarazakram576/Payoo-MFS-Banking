@@ -1,27 +1,21 @@
-// document
-//   .getElementById("add-money-btn")
-//   .addEventListener("click", function (event) {
-//     event.preventDefault();
-//     const amountToAdd = document.getElementById("amountToAdd").value;
-//     const convertedAmount = parseFloat(amountToAdd);
+document
+  .getElementById("add-money-btn")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
 
-//     const pin = document.getElementById("pin").value;
-//     const convertedPin = parseInt(pin);
+    const amount = getInputValueById("amountToAdd");
+    const pin = getInputValueById("add-money-pin");
+    const bankAccountNumber = document.getElementById("bank-account-number").value;
+    const mainBalance = getInputInnerTextById("mainBalance");
 
-//     const mainBalance = document.getElementById("mainBalance").innerText;
-//     const convertedMainBalance = parseFloat(mainBalance);
-
-//     if (convertedPin === 1234) {
-//       const newMainBalance = convertedMainBalance + convertedAmount;
-//       document.getElementById("mainBalance").innerText = newMainBalance;
-//     } else {
-//       alert("pin thik nai");
-//     }
-//   });
-
-
-
-document.getElementById('add-money')
-.addEventListener('click', function(event){
-event.preventDefault();
-})
+    if (bankAccountNumber.length === 11) {
+      if (pin === 1234) {
+        const newMainBalance = mainBalance + amount;
+        setInnerTextByIdAndValue("mainBalance", newMainBalance);
+      } else {
+        alert("pin thik nai");
+      }
+    } else {
+      alert("Give a 11 digit agent number");
+    }
+  });

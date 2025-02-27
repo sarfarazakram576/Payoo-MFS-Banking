@@ -40,9 +40,7 @@ document.getElementById("cashout").addEventListener("click", function () {
 });
 
 //  for transfer
-document
-  .getElementById("transfer-money")
-  .addEventListener("click", function () {
+document.getElementById("transfer-money").addEventListener("click", function () {
     document.getElementById("add-money").style.backgroundColor = "";
     document.getElementById("add-money").style.borderColor = "";
     document.getElementById("add-money-h3").style.color = "";
