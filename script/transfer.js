@@ -46,20 +46,41 @@ document
     if (userAccountNumber.length === 11) {
       if (pin === 1234) {
         if (amount <= mainBalance) {
-        if(amount > 0){
-          const newMainBalance = mainBalance - amount;
-        setInnerTextByIdAndValue("mainBalance", newMainBalance);
-        }
-        else if(amount === 0){
-          alert('you can`t transfer $0')
-        }
-        else{
-          alert('you can`t transfer negative amount')
-        }
-        }
+          if (amount > 0) {
+            const newMainBalance = mainBalance - amount;
+            setInnerTextByIdAndValue("mainBalance", newMainBalance);
+
+            const container = document.getElementById("transection-container");
+            const div = document.createElement("div");
+            div.classList.add(
+              "p-6",
+              "bg-white",
+              "mb-4",
+              "rounded-xl",
+              "border",
+              "border-gray-300"
+            );
+            div.innerHTML = `
         
-        else{
-          alert('you can`t have enough balance')
+  <div class="flex gap-3 items-center">
+  <div class="bg-[#F4F5F7] p-3 rounded-full">
+    <img src="assets/send1.png" alt="" class="w-10" />
+  </div>
+  <div>
+    <h3 class="font-bold text-lg text-[#525252]">Transfer Money</h3>
+    <p class="text-[#525252] font-semibold">${currentTime}</p>
+  </div>
+  </div>
+  <p class="text-[#525252] font-semibold">You transfer $${amount} to this ${userAccountNumber} account number 
+    `;
+            container.appendChild(div);
+          } else if (amount === 0) {
+            alert("you can`t transfer $0");
+          } else {
+            alert("you can`t transfer negative amount");
+          }
+        } else {
+          alert("you can`t have enough balance");
         }
       } else {
         alert("pin thik nai");

@@ -4,7 +4,6 @@ function getInputValueById(id) {
   return convertedvalue;
 }
 
-
 function getInnerTextById(id) {
   const value = document.getElementById(id).innerText;
   const convertedvalue = parseFloat(value);
@@ -20,7 +19,7 @@ function handleToggle(id, status) {
   document.getElementById(id).style.display = status;
 }
 
-//   log out 
-document.getElementById('logout-btn').addEventListener('click', function(){
-  window.location.href = 'index.html';
-})
+//   log out
+document.getElementById("logout-btn").addEventListener("click", function () {
+  window.location.href = "index.html";
+});

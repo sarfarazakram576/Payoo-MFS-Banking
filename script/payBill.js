@@ -19,7 +19,14 @@ document
               document.getElementById("bankForPayBill").value;
             const container = document.getElementById("transection-container");
             const div = document.createElement("div");
-            div.classList.add("p-6", "bg-white", "mb-4", "rounded-xl", 'border', 'border-gray-300');
+            div.classList.add(
+              "p-6",
+              "bg-white",
+              "mb-4",
+              "rounded-xl",
+              "border",
+              "border-gray-300"
+            );
             div.innerHTML = `
             
     <div class="flex gap-3 items-center">
@@ -27,16 +34,14 @@ document
         <img src="assets/purse1.png" alt="" class="w-10" />
       </div>
       <div>
-        <h3 class="font-bold text-lg text-[$525252]">Pay Bill</h3>
-        <p class="text-[$525252]">${currentTime}</p>
+        <h3 class="font-bold text-lg text-[#525252]">Pay Bill</h3>
+        <p class="text-[#525252] font-semibold">${currentTime}</p>
       </div>
     </div>
-    <p>You pay $${amount} to this ${billerNumber} account number of ${selectedBank} (bank or online banking app)</p>
+    <p class='text-[#525252] font-semibold'>You pay $${amount} to this ${billerNumber} account number of ${selectedBank} (bank or online banking app)</p>
   
         `;
             container.appendChild(div);
-
-            
           } else if (amount === 0) {
             alert("you can`t pay $0 bill");
           } else {

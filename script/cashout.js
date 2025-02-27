@@ -11,40 +11,41 @@ document
     if (agentNumber.length === 11) {
       if (pin === 1234) {
         if (amount <= mainBalance) {
-        if(amount > 0){
-          const newMainBalance = mainBalance - amount;
-        setInnerTextByIdAndValue("mainBalance", newMainBalance);
+          if (amount > 0) {
+            const newMainBalance = mainBalance - amount;
+            setInnerTextByIdAndValue("mainBalance", newMainBalance);
 
-
-      const container = document.getElementById("transection-container");
-      const div = document.createElement("div");
-      div.classList.add("p-6", "bg-white", "mb-4", "rounded-xl", 'border', 'border-gray-300');
-      div.innerHTML = `
+            const container = document.getElementById("transection-container");
+            const div = document.createElement("div");
+            div.classList.add(
+              "p-6",
+              "bg-white",
+              "mb-4",
+              "rounded-xl",
+              "border",
+              "border-gray-300"
+            );
+            div.innerHTML = `
       
 <div class="flex gap-3 items-center">
 <div class="bg-[#F4F5F7] p-3 rounded-full">
-  <img src="assets/purse1.png" alt="" class="w-10" />
+  <img src="assets/send1.png" alt="" class="w-10" />
 </div>
 <div>
-  <h3 class="font-bold text-lg text-[$525252]">Pay Bill</h3>
-  <p class="text-[$525252]">${currentTime}</p>
+  <h3 class="font-bold text-lg text-[#525252]">Cashout</h3>
+  <p class="text-[#525252] font-semibold">${currentTime}</p>
 </div>
 </div>
-<p>You pay $${amount} to this ${billerNumber} account number of ${selectedBank} (bank or online banking app)</p>
-
+<p class="text-[#525252] font-semibold">You cashout $${amount} through ${agentNumber} agent account number 
   `;
-      container.appendChild(div);
-        }
-        else if(amount === 0){
-          alert('you can`t cashout $0')
-        }
-        else{
-          alert('you can`t cashout negative amount')
-        }
-        }
-        
-        else{
-          alert('you can`t have enough balance')
+            container.appendChild(div);
+          } else if (amount === 0) {
+            alert("you can`t cashout $0");
+          } else {
+            alert("you can`t cashout negative amount");
+          }
+        } else {
+          alert("you can`t have enough balance");
         }
       } else {
         alert("pin thik nai");

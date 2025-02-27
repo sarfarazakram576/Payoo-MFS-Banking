@@ -16,12 +16,18 @@ document
         if (amount > 0) {
           const newMainBalance = mainBalance + amount;
           setInnerTextByIdAndValue("mainBalance", newMainBalance);
-          
 
-          const selectedBank = document.getElementById('bankForAddMoney').value;
-          const container = document.getElementById('transection-container');
-          const div = document.createElement('div');
-          div.classList.add('p-6', 'bg-white', 'mb-4', 'rounded-xl', 'border', 'border-gray-300')
+          const selectedBank = document.getElementById("bankForAddMoney").value;
+          const container = document.getElementById("transection-container");
+          const div = document.createElement("div");
+          div.classList.add(
+            "p-6",
+            "bg-white",
+            "mb-4",
+            "rounded-xl",
+            "border",
+            "border-gray-300"
+          );
           div.innerHTML = `
               
       <div class="flex gap-3 items-center">
@@ -29,16 +35,14 @@ document
           <img src="assets/wallet1.png" alt="" class="w-10" />
         </div>
         <div>
-          <h3 class="font-bold text-lg text-[$525252]">Add Money</h3>
-          <p class="text-[$525252]">${currentTime}</p>
+          <h3 class="font-bold text-lg text-[#525252]">Add Money</h3>
+          <p class="text-[#525252] font-semibold">${currentTime}</p>
         </div>
       </div>
-      <p>You Added $${amount} to your account from this ${bankAccountNumber} account number of ${selectedBank} (bank or online banking app)</p>
+      <p class="text-[#525252] font-semibold">You Added $${amount} to your account from this ${bankAccountNumber} account number of ${selectedBank} (bank or online banking app)</p>
     
-          `
+          `;
           container.appendChild(div);
-
-
         } else if (amount === 0) {
           alert("you can`t add $0");
         } else {
@@ -52,12 +56,11 @@ document
     }
   });
 
-
-  // currentTime
-  const now = new Date();
+// currentTime
+const now = new Date();
 let hours = now.getHours();
 const minutes = now.getMinutes();
 const seconds = now.getSeconds();
-const ampm = hours >= 12 ? 'PM' : 'AM';
+const ampm = hours >= 12 ? "PM" : "AM";
 hours = hours % 12 || 12;
 const currentTime = `${hours}:${minutes}:${seconds} ${ampm}`;
