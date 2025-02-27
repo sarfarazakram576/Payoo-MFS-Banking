@@ -11,7 +11,7 @@ document
         
         // for go to main file
 
-        window.location.href = "../html/main.html";
+        window.location.href = "main.html";
       } else {
         alert("pin thik nai");
       }
