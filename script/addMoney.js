@@ -1,8 +1,5 @@
-document
-  .getElementById("add-money-btn")
-  .addEventListener("click", function (event) {
+document.getElementById("add-money-btn").addEventListener("click", function (event) {
     event.preventDefault();
-
     const amount = getInputValueById("amountToAdd");
     const pin = getInputValueById("add-money-pin");
 
