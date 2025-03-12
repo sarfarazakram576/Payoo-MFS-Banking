@@ -12,10 +12,14 @@ document
     if (billerNumber.length === 11) {
       if (pin === 1234) {
         if (selectedBank !== "Select Bank or Online Banking App") {
-          if (amount <= mainBalance) {
+          if (!amount) {
+            alert("give amount");
+          } else if (amount <= mainBalance) {
             if (amount > 0) {
               const newMainBalance = mainBalance - amount;
               setInnerTextByIdAndValue("mainBalance", newMainBalance);
+
+              const uniqueID = `trans_${new Date().getTime()}`;
 
               const container = document.getElementById(
                 "transection-container"
@@ -30,7 +34,7 @@ document
                 "border-gray-300"
               );
               div.innerHTML = `
-          <div id="details8">      
+         
         <div class="flex gap-3 items-center justify-between">
         <div class='flex items-center gap-3'>
           <div class="bg-[#F4F5F7] p-3 rounded-full">
@@ -41,42 +45,34 @@ document
             <p class="text-[#525252] font-semibold">${currentTime}</p>
           </div>
           </div>
-          <div class=''>
-          <i id='showDetails8' class="cursor-pointer fa-solid fa-ellipsis-vertical text-[#525252] text-xl"></i>
-         <i id='hideDetails8'  class="cursor-pointer fa-solid fa-xmark text-[#525252] text-xl"></i>
+          <div>
+          <i id='${uniqueID}_toggle' class="cursor-pointer fa-solid fa-ellipsis-vertical text-[#525252] text-xl"></i>
+        
           </div>
           </div>
-          </div>
+               <p id='${uniqueID}_details' class='hidden text-[#525252]  font-semibold'>You pay $${amount} to this ${billerNumber} account number of ${selectedBank} (bank or online banking app)</p>
+
           `;
               container.appendChild(div);
 
-              document.getElementById("hideDetails8").style.display = "none";
+              const transactionDetails = document.getElementById(
+                `${uniqueID}_details`
+              );
 
-              document
-                .getElementById("showDetails8")
-                .addEventListener("click", function () {
-                  const p = document.createElement("p");
-                  p.classList.add("text-[#525252]", "font-semibold");
-                  p.innerText = `You pay $${amount} to this ${billerNumber} account number of ${selectedBank} (bank or online banking app)`;
-
-                  const details8 = document.getElementById("details8");
-                  details8.appendChild(p);
-
-                  document.getElementById("showDetails8").style.display = "none";
-                  document.getElementById("hideDetails8").style.display =
-                    "block";
-
-                  document
-                    .getElementById("hideDetails8")
-                    .addEventListener("click", function () {
-                      document.getElementById("showDetails8").style.display =
-                        "block";
-                      document.getElementById("hideDetails8").style.display =
-                        "none";
-
-                      details8.removeChild(p);
-                    });
-                });
+              const toggleDetails = document.getElementById(
+                `${uniqueID}_toggle`
+              );
+              toggleDetails.addEventListener("click", () => {
+                if (transactionDetails.classList.contains("hidden")) {
+                  transactionDetails.classList.remove("hidden");
+                  toggleDetails.classList.remove("fa-ellipsis-vertical");
+                  toggleDetails.classList.add("fa-xmark");
+                } else {
+                  transactionDetails.classList.add("hidden");
+                  toggleDetails.classList.add("fa-ellipsis-vertical");
+                  toggleDetails.classList.remove("fa-xmark");
+                }
+              });
             } else if (amount === 0) {
               alert("you can`t pay $0 bill");
             }
