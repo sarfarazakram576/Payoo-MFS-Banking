@@ -18,6 +18,9 @@ document
             const newMainBalance = mainBalance + amount;
             setInnerTextByIdAndValue("mainBalance", newMainBalance);
 
+const uniqueID = "trans_" + new Date().getTime();
+console.log(uniqueID)
+
             const container = document.getElementById("transection-container");
             const div = document.createElement("div");
             div.classList.add(
@@ -28,7 +31,7 @@ document
               "border",
               "border-gray-300"
             );
-            div.id = 'details';
+            div.id = "details";
             div.innerHTML = `
               
         <div class="flex gap-3 items-center justify-between">
@@ -41,44 +44,37 @@ document
             <p class="text-[#525252] font-semibold">${currentTime}</p>
           </div>
           </div>
-          <div class=''>
-          <i id='showDetails' class="cursor-pointer fa-solid fa-ellipsis-vertical text-[#525252] text-xl"></i>
-         <i id='hideDetails'  class="cursor-pointer fa-solid fa-xmark text-[#525252] text-xl"></i>
+          <div>
+          <i id="${uniqueID}_toggle" class="cursor-pointer fa-solid fa-ellipsis-vertical text-[#525252] text-xl"></i>
           </div>
           </div>
-
           
+          <p id='${uniqueID}_details' class='hidden text-[#525252]  font-semibold'>You Added $${amount} to your account from this ${bankAccountNumber} account number of ${selectedBank} (bank or online banking app)</p>
           `;
+          
             container.appendChild(div);
 
-            document.getElementById("hideDetails").style.display = "none";
+            const transactionDetails =
+              document.getElementById(`${uniqueID}_details`);
 
-            document
-              .getElementById("showDetails")
-              .addEventListener("click", function () {
-                const p = document.createElement("p");
-                p.classList.add("text-[#525252]", "font-semibold");
-                p.innerText = `You Added $${amount} to your account from this ${bankAccountNumber} account number of ${selectedBank} (bank or online banking app)`;
+            const toggleDetails = document.getElementById(`${uniqueID}_toggle`);
+            toggleDetails.addEventListener("click", () => {
+              if (transactionDetails.classList.contains("hidden")) {
+                transactionDetails.classList.remove("hidden");
+                toggleDetails.classList.remove("fa-ellipsis-vertical");
+                toggleDetails.classList.add("fa-xmark");
+              } else {
+                transactionDetails.classList.add("hidden");
+                toggleDetails.classList.remove("fa-xmark");
+                toggleDetails.classList.add("fa-ellipsis-vertical");
+              }
+            });
 
-                const details = document.getElementById("details");
-                details.appendChild(p);
-
-                document.getElementById("showDetails").style.display = "none";
-                document.getElementById("hideDetails").style.display = "block";
-
-                document
-                  .getElementById("hideDetails")
-                  .addEventListener("click", function () {
-                    document.getElementById("showDetails").style.display =
-                      "block";
-                    document.getElementById("hideDetails").style.display =
-                      "none";
-
-                    details.removeChild(p);
-                  });
-              });
+            
           } else if (amount === 0) {
             alert("you can`t add $0");
+          } else if (!amount) {
+            alert("give amount");
           } else {
             alert("you can`t add negative amount");
           }
