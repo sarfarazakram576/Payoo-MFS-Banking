@@ -18,8 +18,7 @@ document
             const newMainBalance = mainBalance + amount;
             setInnerTextByIdAndValue("mainBalance", newMainBalance);
 
-const uniqueID = "trans_" + new Date().getTime();
-console.log(uniqueID)
+            const uniqueID = "trans_" + new Date().getTime();
 
             const container = document.getElementById("transection-container");
             const div = document.createElement("div");
@@ -51,11 +50,12 @@ console.log(uniqueID)
           
           <p id='${uniqueID}_details' class='hidden text-[#525252]  font-semibold'>You Added $${amount} to your account from this ${bankAccountNumber} account number of ${selectedBank} (bank or online banking app)</p>
           `;
-          
+
             container.appendChild(div);
 
-            const transactionDetails =
-              document.getElementById(`${uniqueID}_details`);
+            const transactionDetails = document.getElementById(
+              `${uniqueID}_details`
+            );
 
             const toggleDetails = document.getElementById(`${uniqueID}_toggle`);
             toggleDetails.addEventListener("click", () => {
@@ -69,8 +69,6 @@ console.log(uniqueID)
                 toggleDetails.classList.add("fa-ellipsis-vertical");
               }
             });
-
-            
           } else if (amount === 0) {
             alert("you can`t add $0");
           } else if (!amount) {
