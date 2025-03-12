@@ -28,8 +28,9 @@ document
               "border",
               "border-gray-300"
             );
+            div.id = 'details';
             div.innerHTML = `
-          <div id="details">      
+              
         <div class="flex gap-3 items-center justify-between">
         <div class='flex items-center gap-3'>
           <div class="bg-[#F4F5F7] p-3 rounded-full">
@@ -45,7 +46,8 @@ document
          <i id='hideDetails'  class="cursor-pointer fa-solid fa-xmark text-[#525252] text-xl"></i>
           </div>
           </div>
-          </div>
+
+          
           `;
             container.appendChild(div);
 
